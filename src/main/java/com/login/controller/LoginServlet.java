@@ -40,8 +40,8 @@ protected void doPost(HttpServletRequest req, HttpServletResponse res) throws Se
 	
 	
 	  if(Uservalidation.validateUser(username, userpass )){  
-	        //RequestDispatcher rd = req.getRequestDispatcher("ListServlet");  
-	        //rd.forward(req,res);  
+		  RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/registrationlist.jsp");  
+	        rd.forward(req,res);  
 	    }  
 	    else{  
 	        pr.print("Sorry username or password error");  
