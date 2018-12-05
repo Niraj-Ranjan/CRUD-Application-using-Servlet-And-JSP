@@ -52,19 +52,29 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 
 tr td:hover { background: #666; color: #FFF; }  
 
-#edit{
-
-font-size: 10px;
-  font-weight: 200;
-  color: #4c4c4c;
-  text-align: center;
-  padding-top: 10px;
-  
+#edit {
+  width: 80px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 15px;
+  background-color: red;
+  text-decoration: none;
 }
+
+#del {
+  text-decoration: none;
+  width: 80px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 15px;
+  background-color: green;
+}
+  
 /* Hover cell effect! */
 </style>
 
 	<table>
+	<thead>
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
@@ -73,23 +83,23 @@ font-size: 10px;
 			<th>EDIT</th>
 			<th>DELETE</th>
 		</tr>
-
+	</thead>
+<tbody>
 		<c:forEach items="${list}" var="u">
 			<tr>
 				<td>${u.getId()}</td>
 				<td>${u.getFname()}</td>
 				<td>${u.getUname()}</td>
 				<td>${u.getPassword()}</td>
-				<div id="edit">
 				
-				<td><a href="EditServlet?id=${u.getId()}">Edit</a></td>
-				</div>
+				<td id = "edit"><a href="EditServlet?id=${u.getId()}" style="color:white;text-decoration: none;">Edit</a></td>
+							
 				
-				<div class="delete">
-				<td><a href="DeleteServlet?id=${u.getId()}">Delete</a></td>
-				</div>
+				<td id = "del"><a href="DeleteServlet?id=${u.getId()}" style="color:white;text-decoration: none;">Delete</a></td>
+				
 				
 			</tr>
 		</c:forEach>
+		</tbody>	
 </body>
 </html>
