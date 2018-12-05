@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Registration List</title>
+<link type="text/css" rel="stylesheet" href="<c:url value="/materialize.min.css" />"  media="screen,projection"/>
 </head>
 <body>
 
@@ -72,7 +73,12 @@ tr td:hover { background: #666; color: #FFF; }
   
 /* Hover cell effect! */
 </style>
+<div class = "container">
 
+<div class="row">
+    <div class="col s12 m12	">
+      <div class="card-panel teal">
+      <div class = "responsive-table">
 	<table>
 	<thead>
 		<tr>
@@ -83,6 +89,7 @@ tr td:hover { background: #666; color: #FFF; }
 			<th>EDIT</th>
 			<th>DELETE</th>
 		</tr>
+		
 	</thead>
 <tbody>
 		<c:forEach items="${list}" var="u">
@@ -100,6 +107,15 @@ tr td:hover { background: #666; color: #FFF; }
 				
 			</tr>
 		</c:forEach>
-		</tbody>	
+		</tbody>
+		</div>
+		  </div>
+	  
+
+    </div>
+      </div>
+	  
+
+   	
 </body>
 </html>
