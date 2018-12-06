@@ -8,12 +8,6 @@
 </head>
 <body>
 
-<form action="/RegisterServlet" method="POST">
 
-		Full Name : <input type="text" name="fname"  />
-		User Name : <input type="text" name="uname"  />
-		Password : <input type="password" name="pass"  /> 
-		<input type="submit" value="Register"/>
-	</form>
 </body>
 </html>

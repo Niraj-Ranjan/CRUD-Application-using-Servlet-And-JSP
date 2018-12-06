@@ -1,4 +1,9 @@
-com\login\Uservalidation.class
-com\login\RegisterServlet.class
-com\login\LoginServlet.class
-com\login\WelcomeServlet.class
+com\login\controller\EditServlet.class
+com\niraj\dao\UserDao.class
+com\login\controller\Uservalidation.class
+com\login\controller\DeleteServlet.class
+com\login\controller\RegisterServlet.class
+com\niraj\model\user.class
+com\login\controller\LoginServlet.class
+com\login\controller\ListServlet.class
+com\login\controller\UpdateServlet.class

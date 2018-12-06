@@ -7,6 +7,7 @@ import java.rmi.ServerException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,13 +40,15 @@ protected void doPost(HttpServletRequest req, HttpServletResponse res) throws Se
 
 	
 	
-	  if(Uservalidation.validateUser(username, userpass )){  
+	  if(Uservalidation.validateUser(username, userpass )){ 
+		 
 		  RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/registrationlist.jsp");  
-	        rd.forward(req,res);  
+	        rd.forward(req,res); 
 	    }  
 	    else{  
 	        pr.print("Sorry username or password error");  
-	        
+	        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/login.jsp"); 
+	        rd.forward(req,res);
 	    }  
 		
 	
